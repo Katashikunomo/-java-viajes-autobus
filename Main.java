@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         
@@ -49,7 +51,11 @@ public class Main {
         gerardo.mostrarViajes();
 
          c10.mostrarAsientos();
-        // c19.mostrarAsientos();
+
+        gerardo.comprarBoletos(c22, 19 );
+
+        //c22.mostrarAsientos();
+         // c19.mostrarAsientos();
 
 
   

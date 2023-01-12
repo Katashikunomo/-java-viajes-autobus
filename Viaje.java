@@ -16,8 +16,8 @@ public class Viaje {
 
     public void imprimirViaje(){
         System.out.println(corrida);
-        System.out.println("Haora el asiento esta ocupado:");
         for(Asiento aux: asientos){
+            System.out.println("Haora el asiento "+asientos+" esta ocupado:");
             System.out.println(aux+"\n");
         }
     }
