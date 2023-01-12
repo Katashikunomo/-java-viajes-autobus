@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Corrida{
     //Atributos
-    //  public int id;
+    public int id;
     public String horario;
     public String origen;
     public String destino;
@@ -30,8 +30,8 @@ public class Corrida{
         // asientos = new ArrayList<>();
     
         System.out.println("Creando asientos en corrida "+bus.placas+"\n" );
-        for(int i = 1; i<=20; i++){
-            Asiento a = new Asiento(i, true);
+        for(int i = 0; i<20; i++){
+            Asiento a = new Asiento(i+1, true);
              bus.asientos.add(a);
         }
     }
@@ -41,7 +41,7 @@ public class Corrida{
     public void mostrarAsientos(){
         System.out.println("Imprimiendo Asientos de autobus con placas :" + bus.placas + " con Origen: " + origen + " Destino: " + destino);
         int tam = bus.asientos.size();
-        for(int i =0; i<=18; i++){
+        for(int i =0; i<=tam; i++){
             
             System.out.println(" "+bus.asientos.get(i) + "  " + bus.asientos.get(i+1)+ "                "+ bus.asientos.get(i+2)+"  "+ bus.asientos.get(i+3));
             i += 3;
@@ -52,10 +52,10 @@ public class Corrida{
 
     public Asiento reservarAsiento( int numAsiento){
         boolean bandera = false;
-        for(Asiento aux: bus.asientos){
+        for(Asiento aux : bus.asientos){
             if(aux.id == numAsiento){
-                if(aux.disponible == true){
-                    aux.disponible = false;
+                if(aux.estado == true){
+                    aux.estado = false;
                     bandera = true; 
                     return aux;     
                 }else{

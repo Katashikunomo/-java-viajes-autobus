@@ -1,21 +1,21 @@
 public class Asiento {
     //Atributos
     public int id;
-    public boolean disponible;
+    public boolean estado;
 
     //Constructores
     public Asiento(){}
     
-    public Asiento(int id, boolean disponible){
+    public Asiento(int id, boolean estado){
         this.id = id;
-        this.disponible = disponible;
+        this.estado = estado;
     }
 
     //Metodos
 
     public String toString(){
         String disponibleAsiento;
-        if (disponible) {
+        if (estado) {
              disponibleAsiento = "Disponible";
         }else{
             disponibleAsiento = "Ocupado";
